@@ -6,3 +6,11 @@
 .bangla-font{
     font-family: "Hind Siliguri", sans-serif;
 }
+/* .lesson-btn{
+  background-color: blue;
+  color: white;
+} */
+.active{
+  background-color: #422AD5;
+  color: white;
+}
