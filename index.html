@@ -1,107 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Janala</title>
-    <!-- font awesome cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- tailwind  css cdn  -->
-    <!-- Daisy Ui Cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- poppins Font  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Hind Siliguri font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Css Link  -->
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body class="primary-font">
-    <!-- Navigation Section  -->
-    <header>
 
-        <div class="navbar bg-base-100 shadow-sm md:px-20 bg-[#f5f5f5]">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>FAQ</a></li>
-        <li>
-          <a>Learn</a>
-          
-        </li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
-    <a class="text-xl flex items-center">
-        <span class="font-semibold">English</span>
-        <img src="assets/logo.png" alt="Website logo">
-        <span class="bangla-font font-semibold">জানালা</span>
-    </a>
-  </div>
-  <div class="navbar-end hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 gap-4">
-      <li><button class="btn btn-outline text-[#422AD5]"><i class="fa-regular fa-circle-question"></i> FAQ</button></li>
-      <li><button class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-book-open"></i> Learn</button></li>
-      <li><button class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
-    </ul>
-  </div>
-</div>
-    </header>
-    <!-- main Section  -->
-    <main> 
-      <!-- Banner Section  -->
-      <section class="banner-section  flex flex-col-reverse md:flex-row justify-between items-center mt-11 max-w-11/12 m-auto gap-8">
-        <div class="left-side  text-center md:text-left">
-          <p class="text-3xl font-bold "><span class="text-[#00bcff]">English</span> is Easy !!!</p>
-          <p class="py-6 bangla-font text-xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-          <div>
-            <input type="text" placeholder="Enter Your Name" class="input" /> <br>
-            <input type="text" placeholder="Enter Your Password" class="input my-5" /> <br>
-            <button class="btn btn-primary">Get Started</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Janala</title>
+  <!-- font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind  css cdn  -->
+  <!-- Daisy Ui Cdn  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- poppins Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Hind Siliguri font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- favi Icon  -->
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <!-- Css Link  -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="primary-font">
+  <!-- Navigation Section  -->
+  <header>
+
+    <div class="navbar bg-base-100 shadow-sm md:px-20 bg-[#f5f5f5]">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
           </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <li><a>FAQ</a></li>
+            <li>
+              <a>Learn</a>
+
+            </li>
+            <li><a>Logout</a></li>
+          </ul>
         </div>
-        <div class="right-side ">
-          <img src="assets/hero-student.png" alt="Banner image">
+        <a class="text-xl flex items-center">
+          <span class="font-semibold">English</span>
+          <img src="assets/logo.png" alt="Website logo">
+          <span class="bangla-font font-semibold">জানালা</span>
+        </a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 gap-4">
+          <li><button class="btn btn-outline text-[#422AD5]"><i class="fa-regular fa-circle-question"></i> FAQ</button>
+          </li>
+          <li><button class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-book-open"></i> Learn</button></li>
+          <li><button class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-right-from-bracket"></i>
+              Logout</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- main Section  -->
+  <main>
+    <!-- Banner Section  -->
+    <section
+      class="banner-section  flex flex-col-reverse md:flex-row justify-between items-center mt-11 max-w-11/12 m-auto gap-8">
+      <div class="left-side  text-center md:text-left">
+        <p class="text-3xl font-bold "><span class="text-[#00bcff]">English</span> is Easy !!!</p>
+        <p class="py-6 bangla-font text-xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার
+          দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+        <div>
+          <input type="text" placeholder="Enter Your Name" class="input" /> <br>
+          <input type="text" placeholder="Enter Your Password" class="input my-5" /> <br>
+          <button class="btn btn-primary">Get Started</button>
         </div>
-      </section>
-      <!-- Vocab Section  -->
-      <p class="text-3xl font-bold text-center max-w-11/12 m-auto mt-10 mb-5"><span class="text-[#00bcff]">Let's</span> Learn Vocabularies</p>
-      <!-- Lesson Card Conainer  -->
-      <div id="lesson-container" class="lesson-cards mb-8 flex gap-5 justify-center flex-wrap mx-w-11/12 mx-auto">
-        <!-- <button  class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-book-open"></i>Lesson-${data.level_no}</button> -->
       </div>
-      <!-- Search bar  -->
-      <div class="flex justify-center mb-4 max-w-10/12 md:max-w-full m-auto">
-        <div class="join">
-  <div>
-    <label class="input validator join-item">
-      
-      <input id="input-word" type="text" placeholder="Search word" required/>
-    </label>
-    <div class="validator-hint hidden">Enter word</div>
-  </div>
-  <button class="btn btn-neutral join-item" id="search-btn">Search</button>
-</div>
+      <div class="right-side ">
+        <img src="assets/hero-student.png" alt="Banner image">
       </div>
-      <!-- Spinner  -->
-       <div class="flex justify-center hidden" id="spinner">
-        <span class="loading loading-spinner text-primary"></span>
-       </div>
-      <!-- lesson word container  -->
-      <div id="word-container" class="bg-[#F8F8F8] p-4 md:p-8 max-w-11/12 m-auto rounded-3xl mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        
-        <!-- Word Card  -->
-          <!-- <div class="word-card bg-white rounded-xl text-center">
+    </section>
+    <!-- Vocab Section  -->
+    <p class="text-3xl font-bold text-center max-w-11/12 m-auto mt-10 mb-5"><span class="text-[#00bcff]">Let's</span>
+      Learn Vocabularies</p>
+    <!-- Lesson Card Conainer  -->
+    <div id="lesson-container" class="lesson-cards mb-8 flex gap-5 justify-center flex-wrap mx-w-11/12 mx-auto">
+      <!-- <button  class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-book-open"></i>Lesson-${data.level_no}</button> -->
+    </div>
+    <!-- Search bar  -->
+    <div class="flex justify-center mb-4 max-w-10/12 md:max-w-full m-auto">
+      <div class="join">
+        <div>
+          <label class="input validator join-item">
+
+            <input id="input-word" type="text" placeholder="Search word" required />
+          </label>
+          <div class="validator-hint hidden">Enter word</div>
+        </div>
+        <button class="btn btn-neutral join-item" id="search-btn">Search</button>
+      </div>
+    </div>
+    <!-- Spinner  -->
+    <div class="flex justify-center hidden" id="spinner">
+      <span class="loading loading-spinner text-primary"></span>
+    </div>
+    <!-- lesson word container  -->
+    <div id="word-container"
+      class="bg-[#F8F8F8] p-4 md:p-8 max-w-11/12 m-auto rounded-3xl mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+      <!-- Word Card  -->
+      <!-- <div class="word-card bg-white rounded-xl text-center">
             <p class="font-bold text-3xl pt-5">Eager</p>
             <p class="text-xl font-medium py-6">Meaning / Pronounciation</p>
             <p class="bangla-font font-semibold text-xl">"আগ্রহী / ইগার"</p>
@@ -116,66 +132,115 @@
             </div>
           </div> -->
 
-          <!-- default Card , No seclection  -->
-           <div class="default col-span-3 flex justify-center flex-col items-center"> 
-            <p class="bangla-font text-[#79716B] text-sm">আপনি এখনো কোন Lesson Select করেন নাই </p>
-            <p class="bangla-font text-[#292524] text-xl font-medium py-2">একটি Lesson Select করুন।</p>
-           </div>
-
-          
-          </div>
+      <!-- default Card , No seclection  -->
+      <div class="default col-span-3 flex justify-center flex-col items-center">
+        <p class="bangla-font text-[#79716B] text-sm">আপনি এখনো কোন Lesson Select করেন নাই </p>
+        <p class="bangla-font text-[#292524] text-xl font-medium py-2">একটি Lesson Select করুন।</p>
       </div>
-<!-- Word Details Modal  -->
-      <!-- Open the modal using ID.showModal() method -->
-<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box" id="modal-box-parent">
-    <!-- Word Details will go here  -->
-  </div>
-</dialog>
 
-<!-- Favorite Word Section  -->
- <p class="text-3xl font-bold text-center max-w-11/12 m-auto mt-[100px] mb-8"><span class="text-[#00bcff]">Favorite</span> Vocabularies</p>
- <div id="favorite-word-container" class="my-4 py-5 md:py-9 max-w-11/12 m-auto flex justify-center flex-wrap gap-3 bg-[#F8F8F8] rounded-xl">
-   <!--favorite word goes here-->
-   <div id="default" class="default col-span-3 flex justify-center flex-col items-center"> 
-            <p class="bangla-font text-[#79716B] text-sm">আপনি এখনো কোন Favorite word Select করেন নাই </p>
-            <p class="bangla-font text-[#292524] text-xl font-medium py-2">একটি Word Select করুন।</p>
-           </div>
- </div>
 
- <!-- fAQ Section  -->
-  <section class="max-w-11/12 m-auto mb-[80px] mt-[100px]">
-    <p class="text-3xl font-bold text-center max-w-11/12 m-auto  mb-8"><span class="text-[#00bcff]">Frequently </span> Asked Questions</p>
-   
-   <div class="collapse collapse-plus bg-base-100 border border-base-300">
-  <input type="radio" name="my-accordion-3" checked="checked" />
-  <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
-  <div class="collapse-content text-sm text-[#62748E]">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
-</div>
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
-  <input type="radio" name="my-accordion-3" />
-  <div class="collapse-title font-semibold">2. Is this website free to use?</div>
-  <div class="collapse-content text-sm text-[#62748E]">Yes,Its absolutly free of cost .</div>
-</div>
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
-  <input type="radio" name="my-accordion-3" />
-  <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
-  <div class="collapse-content text-sm text-[#62748E]">No Sign Up needed .</div>
-</div>
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
-  <input type="radio" name="my-accordion-3" />
-  <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
-  <div class="collapse-content text-sm text-[#62748E]">Practice vocabulary daily</div>
-</div>
-<div class="collapse collapse-plus bg-base-100 border border-base-300">
-  <input type="radio" name="my-accordion-3" />
-  <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
-  <div class="collapse-content text-sm text-[#62748E]">Currently no certificate available ! </div>
-</div>
-  </section>
-   
-    </main>
-    <script src="js/app.js"></script>
-    
+    </div>
+    </div>
+    <!-- Word Details Modal  -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box" id="modal-box-parent">
+        <!-- Word Details will go here  -->
+      </div>
+    </dialog>
+
+    <!-- Favorite Word Section  -->
+    <p class="text-3xl font-bold text-center max-w-11/12 m-auto mt-[100px] mb-8"><span
+        class="text-[#00bcff]">Favorite</span> Vocabularies</p>
+    <div id="favorite-word-container"
+      class="my-4 py-5 md:py-9 max-w-11/12 m-auto flex justify-center flex-wrap gap-3 bg-[#F8F8F8] rounded-xl">
+      <!--favorite word goes here-->
+      <div id="default" class="default col-span-3 flex justify-center flex-col items-center">
+        <p class="bangla-font text-[#79716B] text-sm">আপনি এখনো কোন Favorite word Select করেন নাই </p>
+        <p class="bangla-font text-[#292524] text-xl font-medium py-2">একটি Word Select করুন।</p>
+      </div>
+    </div>
+
+    <!-- fAQ Section  -->
+    <section class="max-w-11/12 m-auto mb-[80px] mt-[100px]">
+      <p class="text-3xl font-bold text-center max-w-11/12 m-auto  mb-8"><span class="text-[#00bcff]">Frequently </span>
+        Asked Questions</p>
+
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+        <div class="collapse-content text-sm text-[#62748E]">You can start by exploring our beginner lessons,
+          interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+        <div class="collapse-content text-sm text-[#62748E]">Yes,Its absolutly free of cost .</div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+        <div class="collapse-content text-sm text-[#62748E]">No Sign Up needed .</div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+        <div class="collapse-content text-sm text-[#62748E]">Practice vocabulary daily</div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+        <div class="collapse-content text-sm text-[#62748E]">Currently no certificate available ! </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- footer Section  -->
+  <footer>
+    <footer
+      class="footer sm:footer-horizontal bg-[#FFFFFF]text-neutral-content p-10 text-black border border-t-2 border-[#FFEBEB]">
+      <aside>
+        <div class="flex items-center mb-4">
+          <span class="font-semibold">English</span>
+          <img src="assets/logo.png" alt="Website logo">
+          <span class="bangla-font font-semibold">জানালা</span>
+        </div>
+        <p class="bangla-font font-semibold">
+          ইংরেজি শিখুন সহজে
+          <br />
+          Providing ED-Tech Applications since 2025
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">FOLLOW US</h6>
+        <div class="grid grid-flow-col gap-4">
+          <a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+              </path>
+            </svg>
+          </a>
+          <a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+              </path>
+            </svg>
+          </a>
+          <a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </footer>
+  </footer>
+  <script src="js/app.js"></script>
+
 </body>
+
 </html>
