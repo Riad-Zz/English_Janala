@@ -66,9 +66,15 @@ const wordCardGenerator = allWord =>{
       return ;
     }
 
-    allWord.forEach(word => {
-        // console.log(word) ;
-        const newWordCard = document.createElement('div') ;
+    for(const word of allWord){
+      wordCardCreation(word) ;
+    }
+}
+
+const wordCardCreation = (word) => {
+  const wordContainerParent = document.getElementById('word-container') ;
+    // wordContainerParent.innerHTML = "" ;
+  const newWordCard = document.createElement('div') ;
         newWordCard.innerHTML = `
            <div class="word-card bg-white rounded-xl text-center px-3">
             <p class="font-bold text-2xl pt-5">${word.word ? word.word : "Not found"} </p>
@@ -86,7 +92,6 @@ const wordCardGenerator = allWord =>{
           </div>
         `
         wordContainerParent.appendChild(newWordCard) ;
-    })
 }
 
 // Load Word Details 
@@ -95,7 +100,7 @@ const loadWord = (wordId) => {
   fetch(wordUrl).then(res => res.json()).then(data => displayWordDetails(data.data)) ;
 }
 
-//Word Details Display 
+//-----------------Word Details Display---------------------- 
 const displayWordDetails = allDetails =>{
   console.log(allDetails) ;
   const modalBox = document.getElementById('my_modal_5') ;
@@ -123,7 +128,7 @@ const displayWordDetails = allDetails =>{
   allSynonymsAppend(allDetails.synonyms) ;
   modalBox.showModal() ;
 }
-
+//------------------Synonym finder--------------------- 
 const allSynonymsAppend = allSynonyms =>{
   const parent = document.getElementById('synonyms') ;
   for(const syn of allSynonyms){
@@ -135,3 +140,42 @@ const allSynonymsAppend = allSynonyms =>{
     parent.appendChild(synonymButton) ;
   }
 }
+
+//---------- load all Word from api --------------------
+const loadAllWordAndSearch = (wordToSearch) =>{
+  fetch("https://openapi.programming-hero.com/api/words/all")
+  .then(res => res.json()) 
+  .then(data => {
+     const allWordCollection = data.data ;
+    //  console.log(allWordCollection) ;
+     allWordCollection.forEach(word => {
+      const singleword = word.word.toLowerCase().trim() ;
+      // console.log(singleword) ;
+      if(singleword.includes(wordToSearch)){
+        //  console.log(singleword) ;
+        wordCardCreation(word) ;
+      } ;
+     
+      // if(singleword === wordToSearch){
+      //   console.log(singleword) ;
+      // }
+     }) ;
+  }) ;
+}
+
+
+
+
+//------------------Search functionality--------------------------
+document.getElementById('search-btn') 
+    .addEventListener('click',()=>{
+       const searcedWord = document.getElementById('input-word').value.toLowerCase().trim() ;
+       const wordContainerParent = document.getElementById('word-container') ;
+       wordContainerParent.innerHTML = "" ;
+      //  console.log(searcedWord) ;
+      if(searcedWord != ""){
+        // wordContainerParent.innerHTML = "" ;
+        loadAllWordAndSearch(searcedWord) ;
+      }
+       
+     })
