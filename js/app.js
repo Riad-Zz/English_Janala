@@ -86,7 +86,7 @@ const wordCardCreation = (word) => {
 </button>
               </div>
               <div>
-                <button class="btn btn-square bg-[#1a91ff1a]"><i class="fa-solid fa-volume-high"></i></button>
+                <button onclick = "pronounceWord('${word.word}')" class="btn btn-square bg-[#1a91ff1a]"><i class="fa-solid fa-volume-high"></i></button>
               </div>
             </div>
           </div>
@@ -156,14 +156,9 @@ const loadAllWordAndSearch = (wordToSearch) =>{
         wordCardCreation(word) ;
       } ;
      
-      // if(singleword === wordToSearch){
-      //   console.log(singleword) ;
-      // }
      }) ;
   }) ;
 }
-
-
 
 
 //------------------Search functionality--------------------------
@@ -179,3 +174,11 @@ document.getElementById('search-btn')
       }
        
      })
+
+//------------------Text to speech feature----------------------
+function pronounceWord(word) {
+  // console.log("Clicked") ;
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+} 
