@@ -81,20 +81,25 @@
         <!-- <button  class="btn btn-outline text-[#422AD5]"><i class="fa-solid fa-book-open"></i>Lesson-${data.level_no}</button> -->
       </div>
       <!-- Search bar  -->
-      <div class="flex justify-center mb-4">
+      <div class="flex justify-center mb-4 max-w-10/12 md:max-w-full m-auto">
         <div class="join">
   <div>
     <label class="input validator join-item">
       
-      <input id="input-word" type="text" placeholder="Search word" required />
+      <input id="input-word" type="text" placeholder="Search word" required/>
     </label>
     <div class="validator-hint hidden">Enter word</div>
   </div>
   <button class="btn btn-neutral join-item" id="search-btn">Search</button>
 </div>
       </div>
+      <!-- Spinner  -->
+       <div class="flex justify-center hidden" id="spinner">
+        <span class="loading loading-spinner text-primary"></span>
+       </div>
       <!-- lesson word container  -->
-      <div id="word-container" class="bg-[#F8F8F8] p-8 max-w-11/12 m-auto rounded-3xl mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div id="word-container" class="bg-[#F8F8F8] p-4 md:p-8 max-w-11/12 m-auto rounded-3xl mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        
         <!-- Word Card  -->
           <!-- <div class="word-card bg-white rounded-xl text-center">
             <p class="font-bold text-3xl pt-5">Eager</p>
@@ -127,6 +132,19 @@
     <!-- Word Details will go here  -->
   </div>
 </dialog>
+
+<!-- Favorite Word Section  -->
+ <p class="text-3xl font-bold text-center max-w-11/12 m-auto mt-10 mb-5"><span class="text-[#00bcff]">Favorite</span> Vocabularies</p>
+ <div id="favorite-word-container" class="my-4 py-5 md:py-9 max-w-11/12 m-auto flex justify-center flex-wrap gap-3 bg-[#F8F8F8] rounded-xl">
+   <!--favorite word goes here-->
+   <div id="default" class="default col-span-3 flex justify-center flex-col items-center"> 
+            <p class="bangla-font text-[#79716B] text-sm">আপনি এখনো কোন Favorite word Select করেন নাই </p>
+            <p class="bangla-font text-[#292524] text-xl font-medium py-2">একটি Word Select করুন।</p>
+           </div>
+ </div>
+
+ <!-- fAQ Section  -->
+   <p class="text-3xl font-bold text-center max-w-11/12 m-auto mt-10 mb-5"><span class="text-[#00bcff]">Favorite</span> Vocabularies</p>
     </main>
     <script src="js/app.js"></script>
     

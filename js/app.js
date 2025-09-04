@@ -26,6 +26,7 @@ const lessonButtonGenerator = (allData) =>{
 
 //---------------Get word for specific lessson on-click------------------------- 
 const levelWiseWord = (level) =>{
+   spinnerDisplay(true) ;
     const url = `https://openapi.programming-hero.com/api/level/${level}`
     fetch(url).then(res => res.json())
               .then(data => {
@@ -63,12 +64,14 @@ const wordCardGenerator = allWord =>{
             <p class="bangla-font text-[#292524] text-xl font-medium py-2">নেক্সট Lesson এ যান</p>
       `
       wordContainerParent.appendChild(NoWordMessage) ;
+      spinnerDisplay(false)
       return ;
     }
 
     for(const word of allWord){
       wordCardCreation(word) ;
     }
+    spinnerDisplay(false) ;
 }
 
 const wordCardCreation = (word) => {
@@ -76,7 +79,7 @@ const wordCardCreation = (word) => {
     // wordContainerParent.innerHTML = "" ;
   const newWordCard = document.createElement('div') ;
         newWordCard.innerHTML = `
-           <div class="word-card bg-white rounded-xl text-center px-3">
+           <div class="word-card bg-white rounded-xl text-center px-3 relative">
             <p class="font-bold text-2xl pt-5">${word.word ? word.word : "Not found"} </p>
             <p class="text-xl font-medium py-6">Meaning / Pronounciation</p>
             <p class="bangla-font font-semibold text-xl">"${word.meaning ? word.meaning : "অর্থ পাওয়া যাই নাই"} / ${word.pronunciation ? word.pronunciation : "পাওয়া যাই নাই"}"</p>
@@ -86,9 +89,10 @@ const wordCardCreation = (word) => {
 </button>
               </div>
               <div>
-                <button onclick = "pronounceWord('${word.word}')" class="btn btn-square bg-[#1a91ff1a]"><i class="fa-solid fa-volume-high"></i></button>
+                <button onclick = "pronounceWord('${word.word}')" class="btn btn-square bg-[#1a91ff1a] "><i class="fa-solid fa-volume-high"></i></button>
               </div>
             </div>
+            <div onclick = "heartClickHandler(${word.id})" class = "absolute top-2 right-3 bg-[#1a91ff1a] h-7 w-7 rounded-full flex justify-center items-center cursor-pointer"><i class="fa-regular fa-heart heartIcon"></i></div>
           </div>
         `
         wordContainerParent.appendChild(newWordCard) ;
@@ -155,7 +159,7 @@ const loadAllWordAndSearch = (wordToSearch) =>{
         //  console.log(singleword) ;
         wordCardCreation(word) ;
       } ;
-     
+      spinnerDisplay(false)                                                                                                                                                                                                      ;
      }) ;
   }) ;
 }
@@ -164,6 +168,10 @@ const loadAllWordAndSearch = (wordToSearch) =>{
 //------------------Search functionality--------------------------
 document.getElementById('search-btn') 
     .addEventListener('click',()=>{
+      const allButtons = document.querySelectorAll(".lesson-btn div button") ;
+     for(const btn of allButtons){
+       btn.classList.remove('active') ;
+  }
        const searcedWord = document.getElementById('input-word').value.toLowerCase().trim() ;
        const wordContainerParent = document.getElementById('word-container') ;
        wordContainerParent.innerHTML = "" ;
@@ -171,7 +179,9 @@ document.getElementById('search-btn')
       if(searcedWord != ""){
         // wordContainerParent.innerHTML = "" ;
         loadAllWordAndSearch(searcedWord) ;
+        spinnerDisplay(true) ;
       }
+      
        
      })
 
@@ -182,3 +192,46 @@ function pronounceWord(word) {
   utterance.lang = "en-EN"; // English
   window.speechSynthesis.speak(utterance);
 } 
+
+
+//--------------Spiner display Control-------------
+const spinnerDisplay = value =>{
+  if(value == true){
+    document.getElementById('spinner').classList.remove('hidden') ;
+    document.getElementById('word-container').classList.add('hidden') ;
+  }else{
+    document.getElementById('spinner').classList.add('hidden') ;
+    document.getElementById('word-container').classList.remove('hidden') ;
+  }
+} 
+
+// const allHearts = document.getElementsByClassName("heartIcon");
+// // for(const heart of allHearts){
+// //   heart.addEventListener('mouseenter',()=>{
+// //     console.log("Mouse") ;
+// //   })
+// // }
+// console.log(allHearts.innerHTML) ;
+
+//---------------------Heart Click Handler----------------------
+const heartClickHandler = (wordid)=>{
+  console.log("Hello") ;
+  // console.log(wordDetails) ;
+  console.log(wordid);
+  //fetching word 
+   const defaultNoSelection = document.getElementById('default') ;
+   defaultNoSelection.innerHTML = '' ;
+ fetch(`https://openapi.programming-hero.com/api/word/${wordid}`)
+      .then(res => res.json())
+      .then(data => {
+
+         const fullData = data.data ;
+         const parentContainer = document.getElementById('favorite-word-container') ;
+         const newWordBtn = document.createElement('div') ;
+         newWordBtn.innerHTML = `
+            <button onclick="loadWord(${fullData.id})" class="btn btn-soft btn-primary">${fullData.word}</button>
+         `
+         parentContainer.appendChild(newWordBtn) ;
+      })
+
+}
